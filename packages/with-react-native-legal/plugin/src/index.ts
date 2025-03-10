@@ -5,10 +5,10 @@ import { withAndroidNotice } from './android/withAndroidNotice';
 import { withIosNotice } from './ios/withIosNotice';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-const pak = require('with-react-native-oss-notice/package.json');
+const pak = require('with-react-native-legal/package.json');
 
-const withReactNativeOSSNotice: ConfigPlugin = (config) => {
+const withReactNativeLegal: ConfigPlugin = (config) => {
   return withPlugins(config, [withAndroidNotice, withIosNotice]);
 };
 
-export default createRunOncePlugin(withReactNativeOSSNotice, pak.name, pak.version);
+export default createRunOncePlugin(withReactNativeLegal, pak.name, pak.version);

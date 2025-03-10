@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { WithReactNativeOSSNotice } from 'with-react-native-oss-notice';
+import { WithReactNativeOSSNotice } from 'with-react-native-legal';
 
 const BUTTON_BACKGROUND_COLOR = '#8232ff';
 const BUTTON_FONT_COLOR = '#FFF';

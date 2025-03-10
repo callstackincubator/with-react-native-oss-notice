@@ -20538,9 +20538,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"with-react-native-oss-notice@workspace:packages/with-react-native-oss-notice":
+"with-react-native-legal@workspace:packages/with-react-native-legal":
   version: 0.0.0-use.local
-  resolution: "with-react-native-oss-notice@workspace:packages/with-react-native-oss-notice"
+  resolution: "with-react-native-legal@workspace:packages/with-react-native-legal"
   dependencies:
     "@types/xml2js": ^0.4.11
     expo: ~52.0.36

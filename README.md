@@ -1,4 +1,4 @@
-# `with-react-native-oss-notice`
+# `with-react-native-legal`
 
 Automagically generate license acknowledgements for your React Native app 🚀
 
@@ -9,13 +9,13 @@ Automagically generate license acknowledgements for your React Native app 🚀
 ## Installation
 
 ```sh
-yarn add with-react-native-oss-notice
+yarn add with-react-native-legal
 ```
 
 or
 
 ```sh
-npm i --save with-react-native-oss-notice
+npm i --save with-react-native-legal
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ This tool is split into 2 parts:
 {
   "expo": {
     "plugins": [
-+      "with-react-native-oss-notice"
++      "with-react-native-legal"
     ]
   }
 }
@@ -43,7 +43,7 @@ This tool is split into 2 parts:
 ```tsx
 import * as React from 'react';
 import { Button, View } from 'react-native';
-import { WithReactNativeOSSNotice } from 'with-react-native-oss-notice';
+import { WithReactNativeOSSNotice } from 'with-react-native-legal';
 
 function launchNotice() {
   WithReactNativeOSSNotice.launchLicenseListScreen('OSS Notice');
@@ -65,13 +65,13 @@ function MyComponent() {
 1. Invoke the CLI plugin from the root of your RN app
 
 ```sh
-npx react-native with-oss-notice
+npx react-native with-react-native-legal
 ```
 
 or
 
 ```sh
-yarn react-native with-oss-notice
+yarn react-native with-react-native-legal
 ```
 
 2. Use the library in the codebase
@@ -79,7 +79,7 @@ yarn react-native with-oss-notice
 ```tsx
 import * as React from 'react';
 import { Button, View } from 'react-native';
-import { WithReactNativeOSSNotice } from 'with-react-native-oss-notice';
+import { WithReactNativeOSSNotice } from 'with-react-native-legal';
 
 function launchNotice() {
   WithReactNativeOSSNotice.launchLicenseListScreen('OSS Notice');
@@ -96,7 +96,7 @@ function MyComponent() {
 
 ## Expo
 
-- ✅ You can use this library with [Development Builds](https://docs.expo.dev/development/introduction/) by adding `with-react-native-oss-notice` to your `app.json`/`app.config.js` plugins array.
+- ✅ You can use this library with [Development Builds](https://docs.expo.dev/development/introduction/) by adding `with-react-native-legal` to your `app.json`/`app.config.js` plugins array.
 - ❌ This library can't be used in the "Expo Go" app because it [requires custom native code](https://docs.expo.dev/workflow/customizing/).
 
 ## Contributing

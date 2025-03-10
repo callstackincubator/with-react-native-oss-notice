@@ -15,13 +15,13 @@ export default defineConfig({
       {
         icon: 'github',
         mode: 'link',
-        content: 'https://github.com/callstackincubator/with-react-native-oss-notice',
+        content: 'https://github.com/callstackincubator/with-react-native-legal',
       },
     ],
     footer: {
       message: `Copyright © ${new Date().getFullYear()} Callstack Open Source`,
     },
   },
-  base: '/with-react-native-oss-notice/',
+  base: '/with-react-native-legal/',
   plugins: [pluginCallstackTheme()],
 });

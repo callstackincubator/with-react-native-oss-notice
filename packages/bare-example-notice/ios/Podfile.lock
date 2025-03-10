@@ -1600,7 +1600,7 @@ DEPENDENCIES:
   - React-utils (from `../../../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../../../node_modules/react-native/ReactCommon`)
-  - WithReactNativeOSSNotice (from `../../with-react-native-oss-notice`)
+  - WithReactNativeOSSNotice (from `../../with-react-native-legal`)
   - Yoga (from `../../../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -1735,7 +1735,7 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../../../node_modules/react-native/ReactCommon"
   WithReactNativeOSSNotice:
-    :path: "../../with-react-native-oss-notice"
+    :path: "../../with-react-native-legal"
   Yoga:
     :path: "../../../node_modules/react-native/ReactCommon/yoga"
 

@@ -1,12 +1,12 @@
 module.exports = {
   commands: [
     {
-      name: 'with-oss-notice',
+      name: 'with-react-native-legal',
       description: 'Set up all native boilerplate for OSS licenses notice',
       func: ([], { project: { android, ios } }, {}) => {
-        const withOSSNotice = require('./bare-plugin/build').default;
+        const withLegal = require('./bare-plugin/build').default;
 
-        withOSSNotice(android.sourceDir, ios.sourceDir);
+        withLegal(android.sourceDir, ios.sourceDir);
       },
     },
   ],

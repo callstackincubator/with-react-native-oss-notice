@@ -16,7 +16,7 @@ config.watchFolders = [projectRoot, workspaceRoot];
 config.resolver.nodeModulesPaths = [
   projectRoot,
   path.resolve(workspaceRoot, 'node_modules'),
-  path.join(__dirname, '../with-react-native-oss-notice'),
+  path.join(__dirname, '../with-react-native-legal'),
 ];
 // 3. Force Metro to resolve (sub)dependencies only from the `nodeModulesPaths`
 config.resolver.disableHierarchicalLookup = true;

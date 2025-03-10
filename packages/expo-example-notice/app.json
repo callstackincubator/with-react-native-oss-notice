@@ -42,7 +42,7 @@
           }
         }
       ],
-      "../with-react-native-oss-notice/app.plugin.js"
+      "../with-react-native-legal/app.plugin.js"
     ]
   }
 }
