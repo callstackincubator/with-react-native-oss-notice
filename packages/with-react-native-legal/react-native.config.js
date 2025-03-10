@@ -1,12 +1,12 @@
 module.exports = {
   commands: [
     {
-      name: 'with-react-native-legal',
+      name: 'legal-generate',
       description: 'Set up all native boilerplate for OSS licenses notice',
       func: ([], { project: { android, ios } }, {}) => {
-        const withLegal = require('./bare-plugin/build').default;
+        const withReactNativeLegal = require('./bare-plugin/build').default;
 
-        withLegal(android.sourceDir, ios.sourceDir);
+        withReactNativeLegal(android.sourceDir, ios.sourceDir);
       },
     },
   ],
