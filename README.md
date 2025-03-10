@@ -43,10 +43,10 @@ This tool is split into 2 parts:
 ```tsx
 import * as React from 'react';
 import { Button, View } from 'react-native';
-import { WithReactNativeOSSNotice } from 'with-react-native-legal';
+import { WithReactNativeLegal } from 'with-react-native-legal';
 
 function launchNotice() {
-  WithReactNativeOSSNotice.launchLicenseListScreen('OSS Notice');
+  WithReactNativeLegal.launchLicenseListScreen('OSS Notice');
 }
 
 function MyComponent() {
@@ -65,13 +65,13 @@ function MyComponent() {
 1. Invoke the CLI plugin from the root of your RN app
 
 ```sh
-npx react-native with-react-native-legal
+npx react-native legal-generate
 ```
 
 or
 
 ```sh
-yarn react-native with-react-native-legal
+yarn react-native legal-generate
 ```
 
 2. Use the library in the codebase
@@ -79,10 +79,10 @@ yarn react-native with-react-native-legal
 ```tsx
 import * as React from 'react';
 import { Button, View } from 'react-native';
-import { WithReactNativeOSSNotice } from 'with-react-native-legal';
+import { WithReactNativeLegal } from 'with-react-native-legal';
 
 function launchNotice() {
-  WithReactNativeOSSNotice.launchLicenseListScreen('OSS Notice');
+  WithReactNativeLegal.launchLicenseListScreen('OSS Notice');
 }
 
 function MyComponent() {
