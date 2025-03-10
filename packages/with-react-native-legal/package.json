@@ -41,7 +41,7 @@
     "LICENSE",
     "app.plugin.js",
     "react-native.config.js",
-    "WithReactNativeOSSNotice.podspec"
+    "WithReactNativeLegal.podspec"
   ],
   "scripts": {
     "build-library": "bob build",
@@ -86,11 +86,11 @@
     ]
   },
   "codegenConfig": {
-    "name": "WithReactNativeOSSNotice",
+    "name": "WithReactNativeLegal",
     "type": "all",
     "jsSrcsDir": "./src",
     "android": {
-      "javaPackageName": "com.withreactnativeossnotice"
+      "javaPackageName": "com.withreactnativelegal"
     }
   }
 }

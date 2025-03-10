@@ -1,7 +1,7 @@
 import UIKit
 
-@objc(WithReactNativeOSSNoticeModuleImpl)
-public class WithReactNativeOSSNoticeModuleImpl : NSObject {
+@objc(WithReactNativeLegalModuleImpl)
+public class WithReactNativeLegalModuleImpl : NSObject {
     @objc public static func launchLicenseListScreen(licenseHeaderText: String) {
         guard
             let settingsBundleUrl = Bundle.main.url(forResource: "Settings", withExtension: "bundle"),
@@ -21,7 +21,7 @@ public class WithReactNativeOSSNoticeModuleImpl : NSObject {
                 return
             }
             
-            let tableViewController = WithReactNativeOSSNoticeTableViewController(title: licenseHeaderText, data: licenses)
+            let tableViewController = WithReactNativeLegalTableViewController(title: licenseHeaderText, data: licenses)
             let navController = UINavigationController(rootViewController: tableViewController)
             navController.modalPresentationStyle = .fullScreen
             presentedViewController.present(navController, animated: true)
@@ -33,13 +33,13 @@ public class WithReactNativeOSSNoticeModuleImpl : NSObject {
             .filter { $0["Type"] as? String == "PSChildPaneSpecifier" }
     }
     
-    private static func parseRawLicenseMetadataToArray(rawLicenses: Array<Dictionary<String, Any>>, licensePlistUrl: URL) -> [WithReactNativeOSSNoticeLicenseMetadata] {
+    private static func parseRawLicenseMetadataToArray(rawLicenses: Array<Dictionary<String, Any>>, licensePlistUrl: URL) -> [WithReactNativeLegalLicenseMetadata] {
         return rawLicenses
             .map { licenseObj in
                 guard
                     let file = licenseObj["File"] as? String,
                     let title = licenseObj["Title"] as? String else {
-                    return WithReactNativeOSSNoticeLicenseMetadata()
+                    return WithReactNativeLegalLicenseMetadata()
                 }
 
                 let fileUrl = licensePlistUrl.deletingLastPathComponent().addPathComponent(file).appendingPathExtension("plist")
@@ -48,10 +48,10 @@ public class WithReactNativeOSSNoticeModuleImpl : NSObject {
                     let data = parsePlistToDictArray(fileUrl: fileUrl),
                     let item = data.first(where: { $0["FooterText"] != nil }),
                     let footerText = item["FooterText"] as? String else {
-                    return WithReactNativeOSSNoticeLicenseMetadata(name: title)
+                    return WithReactNativeLegalLicenseMetadata(name: title)
                 }
                 
-                return WithReactNativeOSSNoticeLicenseMetadata(name: title, content: footerText)
+                return WithReactNativeLegalLicenseMetadata(name: title, content: footerText)
             }
             .filter { $0.name != nil }
     }
