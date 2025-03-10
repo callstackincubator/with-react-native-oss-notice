@@ -11,19 +11,17 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.withreactnativeossnotice.expoexamplenotice"
+      "bundleIdentifier": "com.withreactnativelegal.expoexamplenotice"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.withreactnativeossnotice.expoexamplenotice"
+      "package": "com.withreactnativelegal.expoexamplenotice"
     },
     "web": {
       "favicon": "./assets/favicon.png"
