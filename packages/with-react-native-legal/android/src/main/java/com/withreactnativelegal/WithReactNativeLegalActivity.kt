@@ -1,4 +1,4 @@
-package com.withreactnativeossnotice
+package com.withreactnativelegal
 
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -17,11 +17,11 @@ import com.mikepenz.aboutlibraries.ui.LibsSupportFragment
  * with improved back handling
  * and hidden Toolbar/ActionBar for TV devices
  */
-class WithReactNativeOSSNoticeActivity: AppCompatActivity() {
+class WithReactNativeLegalActivity: AppCompatActivity() {
     private lateinit var fragment: LibsSupportFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.WithOSSNoticeTheme)
+        setTheme(R.style.WithLegalTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_licenses)
 

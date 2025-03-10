@@ -12,7 +12,7 @@ def resolveReactNativeDirectory() {
     }
 
     // monorepo workaround
-    // react-native can be hoisted or in project's own node_modules
+    // react-native legal-generatecan be hoisted or in project's own node_modules
     def reactNativeFromNodeModules = file("${projectDir}/../../react-native")
     if (reactNativeFromNodeModules.exists()) {
         return reactNativeFromNodeModules
@@ -24,7 +24,7 @@ def resolveReactNativeDirectory() {
     }
 
     throw new GradleException(
-        "[with-react-native-legal] Unable to resolve react-native location in " +
+        "[with-react-native-legal] Unable to resolve react-native legal-generatelocation in " +
         "node_modules. You should project extension property (in app/build.gradle) " +
         "`REACT_NATIVE_NODE_MODULES_DIR` with path to react-native."
     )
