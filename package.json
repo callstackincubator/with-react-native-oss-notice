@@ -12,7 +12,6 @@
     "typescript": "yarn build:library && tsc --noEmit -p packages/bare-example-notice/tsconfig.json && tsc --noEmit -p packages/bare-example-notice/tsconfig.json",
     "release": "changeset publish",
     "version": "changeset version",
-    "prepare": "yarn build:library && cp README.md LICENSE packages/react-native-legal/",
     "changeset": "changeset"
   },
   "repository": "https://github.com/callstackincubator/react-native-legal",

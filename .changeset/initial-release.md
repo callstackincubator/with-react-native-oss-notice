@@ -1,5 +1,5 @@
 ---
-"react-native-legal": partch
+"react-native-legal": major
 ---
 
 Initial release of react-native-legal 🎉

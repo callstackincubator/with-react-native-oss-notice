@@ -7409,7 +7409,7 @@ __metadata:
     jest: ^29.6.3
     react: 18.3.1
     react-native: 0.76.7
-    react-native-legal: "*"
+    react-native-legal: "workspace:*"
     react-test-renderer: 18.3.1
   languageName: unknown
   linkType: soft
@@ -10494,7 +10494,7 @@ __metadata:
     expo-status-bar: ~2.0.1
     react: 18.3.1
     react-native: 0.76.7
-    react-native-legal: "*"
+    react-native-legal: "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -17264,7 +17264,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-legal@*, react-native-legal@workspace:packages/react-native-legal":
+"react-native-legal@workspace:*, react-native-legal@workspace:packages/react-native-legal":
   version: 0.0.0-use.local
   resolution: "react-native-legal@workspace:packages/react-native-legal"
   dependencies:

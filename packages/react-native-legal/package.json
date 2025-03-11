@@ -46,6 +46,7 @@
   "scripts": {
     "build-library": "bob build",
     "build-plugins": "tsc -p plugin-utils/tsconfig.json && tsc -p bare-plugin/tsconfig.json && tsc -p plugin/tsconfig.json",
+    "prepare": "yarn build-plugins && yarn build-library && cp ../../README.md ../../LICENSE .",
     "tsc": "tsc"
   },
   "devDependencies": {
