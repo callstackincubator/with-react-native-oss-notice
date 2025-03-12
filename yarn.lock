@@ -7390,30 +7390,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bare-example-notice@workspace:packages/bare-example-notice":
-  version: 0.0.0-use.local
-  resolution: "bare-example-notice@workspace:packages/bare-example-notice"
-  dependencies:
-    "@babel/core": ^7.25.2
-    "@babel/preset-env": ^7.25.3
-    "@babel/runtime": ^7.25.0
-    "@react-native-community/cli": 15.0.1
-    "@react-native-community/cli-platform-android": 15.0.1
-    "@react-native-community/cli-platform-ios": 15.0.1
-    "@react-native/babel-preset": 0.76.7
-    "@react-native/metro-config": 0.76.7
-    "@react-native/typescript-config": 0.76.7
-    "@types/react": ~18.3.12
-    "@types/react-test-renderer": ^18.0.0
-    babel-jest: ^29.6.3
-    jest: ^29.6.3
-    react: 18.3.1
-    react-native: 0.76.7
-    react-native-legal: "workspace:*"
-    react-test-renderer: 18.3.1
-  languageName: unknown
-  linkType: soft
-
 "base64-js@npm:^1.2.3, base64-js@npm:^1.3.1, base64-js@npm:^1.5.1":
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
@@ -10481,22 +10457,6 @@ __metadata:
   checksum: 6b7d8536f7dd2a9531ccc1ee946a8cade67fa3a74e44d0bfb70f8098694e0e49a0d981d33760668d4d5475bf6bbf685024f9b2b9c19c9be47f17781aac53b28d
   languageName: node
   linkType: hard
-
-"expo-example-notice@workspace:packages/expo-example-notice":
-  version: 0.0.0-use.local
-  resolution: "expo-example-notice@workspace:packages/expo-example-notice"
-  dependencies:
-    "@babel/core": ^7.25.2
-    "@types/react": ~18.3.12
-    expo: ~52.0.36
-    expo-build-properties: ~0.13.2
-    expo-splash-screen: ~0.29.22
-    expo-status-bar: ~2.0.1
-    react: 18.3.1
-    react-native: 0.76.7
-    react-native-legal: "workspace:*"
-  languageName: unknown
-  linkType: soft
 
 "expo-file-system@npm:~18.0.11":
   version: 18.0.11
@@ -17263,6 +17223,46 @@ __metadata:
   checksum: 58e7c991d80adcd394613debafd9f0d5ce56ee666aa7940c67ac422cdeac09098e0d96cac2985f79d62256fb6ebad7cfc0c3e240df77bae8716d9d293f1f5c7d
   languageName: node
   linkType: hard
+
+"react-native-legal-bare-example@workspace:examples/bare-example":
+  version: 0.0.0-use.local
+  resolution: "react-native-legal-bare-example@workspace:examples/bare-example"
+  dependencies:
+    "@babel/core": ^7.25.2
+    "@babel/preset-env": ^7.25.3
+    "@babel/runtime": ^7.25.0
+    "@react-native-community/cli": 15.0.1
+    "@react-native-community/cli-platform-android": 15.0.1
+    "@react-native-community/cli-platform-ios": 15.0.1
+    "@react-native/babel-preset": 0.76.7
+    "@react-native/metro-config": 0.76.7
+    "@react-native/typescript-config": 0.76.7
+    "@types/react": ~18.3.12
+    "@types/react-test-renderer": ^18.0.0
+    babel-jest: ^29.6.3
+    jest: ^29.6.3
+    react: 18.3.1
+    react-native: 0.76.7
+    react-native-legal: "workspace:*"
+    react-test-renderer: 18.3.1
+  languageName: unknown
+  linkType: soft
+
+"react-native-legal-expo-example@workspace:examples/expo-example":
+  version: 0.0.0-use.local
+  resolution: "react-native-legal-expo-example@workspace:examples/expo-example"
+  dependencies:
+    "@babel/core": ^7.25.2
+    "@types/react": ~18.3.12
+    expo: ~52.0.36
+    expo-build-properties: ~0.13.2
+    expo-splash-screen: ~0.29.22
+    expo-status-bar: ~2.0.1
+    react: 18.3.1
+    react-native: 0.76.7
+    react-native-legal: "workspace:*"
+  languageName: unknown
+  linkType: soft
 
 "react-native-legal@workspace:*, react-native-legal@workspace:packages/react-native-legal":
   version: 0.0.0-use.local
