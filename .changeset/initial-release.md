@@ -2,9 +2,8 @@
 "react-native-legal": major
 ---
 
-Initial release of react-native-legal 🎉
+Initial release of `react-native-legal` 🎉
 
-Features:
 - Full support for both iOS and Android platforms, including tvOS and AndroidTV
 - Native platform integration using LicensePlist (iOS) and AboutLibraries (Android)
 - Automatic dependency scanning and license information generation
