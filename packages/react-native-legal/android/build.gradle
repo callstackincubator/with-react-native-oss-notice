@@ -55,14 +55,8 @@ repositories {
     google()
 }
 
-apply from: "$projectDir/react-native-helpers.gradle"
-
 dependencies {
-    if (project.ext.shouldConsumeReactNativeFromMavenCentral()) {
-        implementation "com.facebook.react:react-android" // Set by the React Native Gradle Plugin
-    } else {
-        implementation 'com.facebook.react:react-native:+' // From node_modules
-    }
+    implementation "com.facebook.react:react-android" // Set by the React Native Gradle Plugin
 
     def aboutLibrariesPluginVersion = "10.8.3"
     implementation("com.mikepenz:aboutlibraries-core-android:$aboutLibrariesPluginVersion")

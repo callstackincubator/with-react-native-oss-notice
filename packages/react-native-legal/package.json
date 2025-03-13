@@ -31,7 +31,6 @@
   "files": [
     "android/src",
     "android/build.gradle",
-    "android/react-native-helpers.gradle",
     "bare-plugin",
     "ios",
     "lib",
