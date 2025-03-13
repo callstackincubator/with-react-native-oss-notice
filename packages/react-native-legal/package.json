@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/callstackincubator/react-native-legal/issues"
   },
-  "homepage": "https://github.com/callstackincubator/react-native-legal#readme",
+  "homepage": "https://callstackincubator.github.io/react-native-legal/",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
