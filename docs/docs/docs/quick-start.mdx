@@ -77,8 +77,10 @@ This will open a native screen listing all detected licenses. The title of the s
 
 On **iOS**, all detected licenses will also appear in the **Settings app** under the app's information section. This is done to comply with **Apple's guidelines**, which require apps to provide open-source license acknowledgments in a visible location.
 
-## Monorepo License Handling
+## Monorepo Support
 
-:::warning
-`react-native-legal` only detects licenses for dependencies listed in the app's `package.json`. It won't include dependencies used only in monorepo packages unless they are also in `package.json`. To include more licenses, add those dependencies to the app's `package.json`.  
+`react-native-legal` scans dependencies from workspace packages with the `workspace:*` notation in your `package.json` in addition to the app's direct dependencies.
+
+:::info
+If a monorepo package is private, its name and license won't be included in the license list, but its dependencies will still be scanned and included.
 :::

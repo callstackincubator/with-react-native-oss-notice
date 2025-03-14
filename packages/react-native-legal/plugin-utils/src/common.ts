@@ -71,47 +71,80 @@ export function arrayIncludesObject(array?: unknown[], object?: unknown) {
 }
 
 /**
+ * Scans a single package and its dependencies for license information
+ */
+function scanPackage(
+  packageName: string,
+  version: string,
+  processedPackages: Set<string>,
+  result: Record<string, LicenseObj>,
+) {
+  const packageKey = `${packageName}@${version}`;
+
+  // Skip if already processed to avoid circular dependencies
+  if (processedPackages.has(packageKey)) {
+    return;
+  }
+
+  processedPackages.add(packageKey);
+
+  try {
+    const localPackageJsonPath = getPackageJsonPath(packageName);
+
+    if (!localPackageJsonPath) {
+      console.warn(`[react-native-legal] skipping ${packageName} could not find package.json`);
+      return;
+    }
+
+    const localPackageJson = require(path.resolve(localPackageJsonPath));
+
+    if (localPackageJson.private !== true) {
+      const licenseFiles = glob.sync('LICEN{S,C}E{.md,}', {
+        cwd: path.dirname(localPackageJsonPath),
+        absolute: true,
+        nocase: true,
+        nodir: true,
+        ignore: '**/{__tests__,__fixtures__,__mocks__}/**',
+      });
+
+      result[packageName] = {
+        author: parseAuthorField(localPackageJson),
+        content: licenseFiles?.[0] ? fs.readFileSync(licenseFiles[0], { encoding: 'utf-8' }) : undefined,
+        description: localPackageJson.description,
+        type: parseLicenseField(localPackageJson),
+        url: parseRepositoryFieldToUrl(localPackageJson),
+        version: localPackageJson.version,
+      };
+    }
+
+    const dependencies = localPackageJson.dependencies || {};
+
+    const isWorkspacePackage = version.startsWith('workspace:');
+
+    if (!isWorkspacePackage) return;
+
+    Object.entries(dependencies).forEach(([depName, depVersion]) => {
+      scanPackage(depName, depVersion as string, processedPackages, result);
+    });
+  } catch (error) {
+    console.warn(`[react-native-legal] could not process package.json for ${packageName}`);
+  }
+}
+
+/**
  * Scans `package.json` and searches for all packages under `dependencies` field. Supports monorepo projects.
  */
 export function scanDependencies(appPackageJsonPath: string) {
   const appPackageJson = require(path.resolve(appPackageJsonPath));
   const dependencies: Record<string, string> = appPackageJson.dependencies;
+  const result: Record<string, LicenseObj> = {};
+  const processedPackages = new Set<string>();
 
-  return Object.keys(dependencies).reduce(
-    (acc, dependency) => {
-      try {
-        const localPackageJsonPath = getPackageJsonPath(dependency);
+  Object.entries(dependencies).forEach(([packageName, version]) => {
+    scanPackage(packageName, version, processedPackages, result);
+  });
 
-        if (!localPackageJsonPath) {
-          console.warn(`[react-native-legal] skipping ${dependency} could not find package.json`);
-          return acc;
-        }
-
-        const localPackageJson = require(path.resolve(localPackageJsonPath));
-        const licenseFiles = glob.sync('LICEN{S,C}E{.md,}', {
-          cwd: path.dirname(localPackageJsonPath),
-          absolute: true,
-          nocase: true,
-          nodir: true,
-          ignore: '**/{__tests__,__fixtures__,__mocks__}/**',
-        });
-
-        acc[dependency] = {
-          author: parseAuthorField(localPackageJson),
-          content: licenseFiles?.[0] ? fs.readFileSync(licenseFiles[0], { encoding: 'utf-8' }) : undefined,
-          description: localPackageJson.description,
-          type: parseLicenseField(localPackageJson),
-          url: parseRepositoryFieldToUrl(localPackageJson),
-          version: localPackageJson.version,
-        };
-      } catch (error) {
-        console.warn(`[react-native-legal] could not process package.json for ${dependency}`);
-      }
-
-      return acc;
-    },
-    {} as Record<string, LicenseObj>,
-  );
+  return result;
 }
 
 function needsQuoting(value: string) {
