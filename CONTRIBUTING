@@ -19,7 +19,7 @@ If you change any native code, then you'll need to rebuild the example app.
 Go to the Expo example app:
 
 ```sh
-cd packages/expo-example-notice
+cd examples/expo-example
 ```
 
 For the first time (and whenever you make a change in native code or in Expo Config Plugin implementation) run:
@@ -45,7 +45,7 @@ yarn ios
 Go to the bare RN example app
 
 ```sh
-cd packages/bare-example-notice
+cd examples/bare-example
 ```
 
 To install Pods:
@@ -130,9 +130,9 @@ To fix formatting errors, run the following:
 yarn lint:js --fix
 ```
 
-To edit the iOS native part, open `packages/bare-example-notice/ios/BareExampleNotice.xcworkspace` in XCode and find the source files at `Pods > Development Pods > ReactNativeLegal`.
+To edit the iOS native part, open `examples/bare-example/ios/ReactNativeLegalBareExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > ReactNativeLegal`.
 
-To edit the Android native part, open `packages/bare-example-notice/android` in Android studio and find the source files at `react-native-legal` under `Android`.
+To edit the Android native part, open `examples/bare-example/android` in Android studio and find the source files at `react-native-legal` under `Android`.
 
 ### Commit message convention
 

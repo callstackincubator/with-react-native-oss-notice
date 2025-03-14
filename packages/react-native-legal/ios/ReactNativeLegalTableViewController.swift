@@ -1,5 +1,5 @@
 class ReactNativeLegalTableViewController: UITableViewController {
-    private let CELL_IDENTIFIER = "OSSNoticeCell"
+    private let CELL_IDENTIFIER = "ReactNativeLegalCell"
     
     private var data: [ReactNativeLegalLicenseMetadata] = [] {
         didSet {

@@ -3,13 +3,14 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "docs"
+      "docs",
+      "examples/*"
     ]
   },
   "scripts": {
     "build:library": "yarn workspace react-native-legal build-plugins && yarn workspace react-native-legal build-library",
     "lint:js": "eslint \"**/*.{js,ts,tsx}\"",
-    "typescript": "yarn build:library && tsc --noEmit -p packages/bare-example-notice/tsconfig.json && tsc --noEmit -p packages/bare-example-notice/tsconfig.json",
+    "typescript": "yarn build:library && tsc --noEmit -p examples/bare-example/tsconfig.json && tsc --noEmit -p examples/expo-example/tsconfig.json",
     "release": "changeset publish",
     "version": "changeset version",
     "changeset": "changeset"
@@ -42,5 +43,5 @@
       "@commitlint/config-conventional"
     ]
   },
-  "packageManager": "yarn@3.6.1"
+  "packageMaager": "yarn@3.6.1"
 }
