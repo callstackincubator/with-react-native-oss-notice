@@ -1,4 +1,4 @@
-package com.ReactNativeLegalBareExample
+package com.reactnativelegalbareexample
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

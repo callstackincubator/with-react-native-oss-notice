@@ -82,7 +82,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.ReactNativeLegalBareExample"
+    namespace "com.reactnativelegalbareexample"
     defaultConfig {
         applicationId "com.reactnativelegalbareexample"
         minSdkVersion rootProject.ext.minSdkVersion
