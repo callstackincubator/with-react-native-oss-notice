@@ -1,6 +1,10 @@
 #import "ReactNativeLegalModule.h"
 
+#if __has_include(<ReactNativeLegal/ReactNativeLegal-Swift.h>)
+#import <ReactNativeLegal/ReactNativeLegal-Swift.h>
+#else
 #import "ReactNativeLegal-Swift.h"
+#endif
 
 #if RCT_NEW_ARCH_ENABLED
 #import "ReactNativeLegal.h"
