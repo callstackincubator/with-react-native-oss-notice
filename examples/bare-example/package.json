@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "yarn react-native legal-generate && react-native run-android --no-packager",
-    "ios": "yarn react-native legal-generate && react-native run-ios --no-packager",
+    "android": "react-native legal-generate && react-native run-android --no-packager",
+    "ios": "react-native legal-generate && react-native run-ios --no-packager",
     "lint": "eslint .",
     "start": "react-native start --config ./metro.config.js",
     "test": "jest",
