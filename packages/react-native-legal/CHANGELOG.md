@@ -1,5 +1,11 @@
 # react-native-legal
 
+## 1.0.1
+
+### Patch Changes
+
+- [#21](https://github.com/callstackincubator/react-native-legal/pull/21) [`483df89`](https://github.com/callstackincubator/react-native-legal/commit/483df8975380b6db15e2710f1be676fd43971d2b) Thanks [@mateusz1913](https://github.com/mateusz1913)! - fix(#19): library support for ios use_frameworks
+
 ## 1.0.0
 
 ### Major Changes
